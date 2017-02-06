@@ -1,4 +1,6 @@
-export const GET_ITEMS = 'GET_ITEMS'
+export const SET_HISTORY = 'SET_HISTORY'
+
+export const GET_ITEM = 'GET_ITEM'
 export const ADD_ITEM = 'ADD_ITEM'
 export const REMOVE_ITEM = 'REMOVE_ITEM'
 export const COMPLETE_ITEM = 'COMPLETE_ITEM'

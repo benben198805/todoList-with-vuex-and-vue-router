@@ -13,13 +13,25 @@ const state = {
 
 const actions = {
     add_item: function({ commit }, text) {
-        commit(types.ADD_ITEM, text)
+        commit(types.ADD_ITEM, text);
+        commit(types.SET_HISTORY, {
+            text: text,
+            action: 'add'
+        });
     },
     remove_item: function({ commit }, index) {
-        commit(types.REMOVE_ITEM, index)
+        commit(types.SET_HISTORY, {
+            text: state.items[index].text,
+            action: 'remove'
+        });
+        commit(types.REMOVE_ITEM, index);        
     },
     complete_item: function({ commit }, index) {
-        commit(types.COMPLETE_ITEM, index)
+        commit(types.COMPLETE_ITEM, index);
+        commit(types.SET_HISTORY, {
+            text: state.items[index].text,
+            action: 'complete'
+        });
     }
 }
 const getters = {
