@@ -47,56 +47,48 @@
         }
     }
 </script>
-<style lang="sass">
-    .title_color{
-         color: red
-     }
-</style>
-
-<style type="text/css">
+<style lang="scss">
 #home {
     width: 300px;
     margin: 0px auto;
     text-align: center;
- }
- 
- ul {
-     list-style-type: none;
- }
- 
- ul li {
-     border-bottom: 1px dashed #eee;
-     cursor: pointer;
-     padding: 4px;
-     margin: 4px 0px;
-     display: flex;
-     justify-content: space-between;
- }
- 
- ul li::before {
-     content: ' ';
-     border: 2px solid green;
-     margin-right: 4px;
- }
- 
- ul li.completed::before {
-     content: ' ';
-     border: 0px;
-     margin-right: 4px;
- }
- 
- .completed {
-     color: gray;
-     border-left: 0px;
- }
- 
- .removeItem {
-     color: red;
- }
- 
- .summary {
-     display: flex;
-     justify-content: space-around;
-     margin: 4px 0px;
+    ul {
+        list-style-type: none;
+        li {
+             border-bottom: 1px dashed #eee;
+             cursor: pointer;
+             padding: 4px;
+             margin: 4px 0px;
+             display: flex;
+             justify-content: space-between;
+
+             &::before {
+                 content: ' ';
+                 border: 2px solid green;
+                 margin-right: 4px;
+             }
+
+             &.completed {
+                 color: gray;
+                 border-left: 0px;
+             }
+             
+             &.removeItem {
+                 color: red;
+             }
+
+             &.completed::before {
+                 content: ' ';
+                 border: 0px;
+                 margin-right: 4px;
+             }
+         }
+    }
+
+     .summary {
+         display: flex;
+         justify-content: space-around;
+         margin: 4px 0px;
+     }
  }
 </style>
