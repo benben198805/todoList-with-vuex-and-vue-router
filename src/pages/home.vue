@@ -5,7 +5,7 @@
             <ul>
                 <li v-for="(item, index) in items" :class="{completed: item.isDone}" @dblclick="removeItem">
                     <div @click="complete(index)">{{item.text}}</div>
-                    <div class="removeItem" @click="removeItem">x</div>
+                    <div class="removeItem" @click="removeItem(index)">x</div>
                 </li>
             </ul>
         </div>
