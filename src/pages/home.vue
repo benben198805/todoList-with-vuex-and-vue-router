@@ -1,21 +1,16 @@
-<template>
-    <div id="home">
-        <h3 class="title_color">{{title}}</h3>
-        <div>
-            <ul>
-                <li v-for="(item, index) in items" :class="{completed: item.isDone}" @dblclick="removeItem">
-                    <div @click="complete(index)">{{item.text}}</div>
-                    <div class="removeItem" @click="removeItem(index)">x</div>
-                </li>
-            </ul>
-        </div>
-         <div class="summary">
-            <div>Done:{{doneItemsCount}}</div>
-            <div>Doing:{{doingItemsCount}}</div>
-        </div>
-        <input type="text" name="" v-model="newItem" @keyup.enter="addItem">
-        <input type="button" name="submit" @click="addItem" value="add">
-    </div>
+<template lang="pug">
+    #home
+        h3.title_color {{title}}
+        div
+            ul
+                li(v-for="(item, index) in items", :class="{completed: item.isDone}",@dblclick="removeItem")
+                    div(@click="complete(index)") {{item.text}}
+                    .removeItem(@click="removeItem(index)") x
+        .summary
+            div Done:{{doneItemsCount}}
+            div Doing:{{doingItemsCount}}
+        input(type="text", name="", v-model="newItem", @keyup.enter="addItem")
+        input(type="button", name="submit", @click="addItem", value="add")
 </template>
 <script>
     require("assets/home.scss");

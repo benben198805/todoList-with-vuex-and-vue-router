@@ -3,7 +3,10 @@
     margin: 0px auto;
     text-align: center;
     table {
+        font-size:16px;
+        font-weight: normal;
         width: 90%;
+        margin: 5px;
         tr {
             &:nth-of-type(2n) {
                 background: #eee;
