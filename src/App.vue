@@ -1,13 +1,10 @@
-<template>
-  <div class="index">
-    <p>
-        <router-link to="/home">Home</router-link>
-        <router-link to="/history">History</router-link>
-    </p>
-    <div>
-        <router-view></router-view>
-    </div>
-  </div>
+<template lang="pug">
+  .index
+    p
+      router-link(to="/home") Home
+      router-link(to="/history") History
+    div
+      router-view
 </template>
 
 <script>
