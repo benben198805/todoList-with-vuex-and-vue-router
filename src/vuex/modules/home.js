@@ -24,13 +24,13 @@ const actions = {
             text: state.items[index].text,
             action: 'remove'
         });
-        commit(types.REMOVE_ITEM, index);        
+        commit(types.REMOVE_ITEM, index);
     },
     complete_item: function({ commit }, index) {
         commit(types.COMPLETE_ITEM, index);
         commit(types.SET_HISTORY, {
             text: state.items[index].text,
-            action: 'complete'
+            action: state.items[index].isDone ? 'complete' : 'undo'
         });
     }
 }
