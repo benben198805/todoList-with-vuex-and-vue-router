@@ -1,10 +1,13 @@
 <template lang="pug">
-  .index
-    p
-      router-link(to="/home") Home
-      router-link(to="/history") History
-    div
-      router-view
+  el-row
+    el-col(:span="2")
+        el-menu(class="el-menu-vertical-demo", mode="vertical")
+            el-menu-item
+                router-link(to="/home") Home
+            el-menu-item
+                router-link(to="/history") History
+    el-col(:span="22")
+        router-view
 </template>
 
 <script>

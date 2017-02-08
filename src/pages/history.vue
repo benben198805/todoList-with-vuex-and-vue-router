@@ -1,17 +1,14 @@
 <template lang="pug">
-    #history
-        h3.title_color hisotry
-            table
-                tr
-                    td
-                    td action
-                    td content
-                    td time
-                tr(v-for="(item, index) in records")                    
-                    td {{index+1}}
-                    td {{item.action}}
-                    td {{item.text}}
-                    td {{new Date(item.time)}}
+    el-row#history
+        el-col(:span="12", :offset="6")
+                el-row.history__title
+                    el-col
+                        h3.title_color hisotry
+                el-table(:data="records", style="width:100%")
+                    el-table-column(lable="index")
+                    el-table-column(prop="action", label="action")
+                    el-table-column(prop="text", label="content")
+                    el-table-column(prop="time", label="time")
 </template>
 <script>
     require("assets/history.scss");
