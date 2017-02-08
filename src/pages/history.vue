@@ -11,7 +11,7 @@
                     td {{index+1}}
                     td {{item.action}}
                     td {{item.text}}
-                    td {{item.time}}
+                    td {{new Date(item.time)}}
 </template>
 <script>
     require("assets/history.scss");
