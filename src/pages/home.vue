@@ -3,7 +3,7 @@
         h3.title_color {{title}}
         div
             ul
-                li(v-for="(item, index) in items", :class="{completed: item.isDone}",@dblclick="removeItem")
+                li(v-for="(item, index) in items", :class="{completed: item.isDone}",@dblclick="removeItem(index)")
                     div(@click="complete(index)") {{item.text}}
                     .removeItem(@click="removeItem(index)") x
         .summary
