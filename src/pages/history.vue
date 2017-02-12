@@ -8,7 +8,7 @@
                     el-table-column(lable="index")
                     el-table-column(prop="action", label="action")
                     el-table-column(prop="text", label="content")
-                    el-table-column(prop="time", label="time")
+                    el-table-column(label="time", :formatter="formatter")
 </template>
 <script>
     require("assets/history.scss");
@@ -17,6 +17,15 @@
         data(){
             return {
 
+            }
+        },
+        methods:{
+            formatter(row, column) {
+                var date = new Date(row.time);
+                var year = date.getFullYear();
+                var month = (date.getMonth()+1)>10?(date.getMonth()+1):'0'+(date.getMonth()+1);
+                var day = date.getDate(); 
+                return [year, month, day].join('/');
             }
         },
         computed:mapGetters({
