@@ -1,11 +1,16 @@
 <template lang="pug">
-    el-menu(class="el-menu-vertical-demo", mode="vertical")
-            el-menu-item(index="1")
-                router-link(to="/home") Home
-            el-menu-item(index="2")
-                router-link(to="/history") History
+    el-row#menu
+        el-col(:span="12", offset="6")
+            el-menu(default-active="1" class="el-menu-demo" mode="horizontal")
+                    el-menu-item(index="1")
+                        router-link(to="/home") 
+                            i.el-icon-date Home
+                    el-menu-item(index="2")
+                        router-link(to="/history") 
+                            i.el-icon-document History 
 </template>
 <script>
+    require("assets/menu.scss");
     export default {
         data(){
             return {

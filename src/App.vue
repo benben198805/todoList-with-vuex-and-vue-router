@@ -1,8 +1,6 @@
 <template lang="pug">
-  el-row
-    el-col(:span="2")
+    .index
         app-menu
-    el-col(:span="22")
         router-view
 </template>
 
