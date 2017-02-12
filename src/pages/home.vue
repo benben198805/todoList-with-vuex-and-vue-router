@@ -13,7 +13,7 @@
                     table
                         tr(v-for="(item, index) in items",@dblclick="removeItem(index)")
                             td(:class="{ isDone: item.isDone }")
-                                el-checkbox(@change="complete(index)")
+                                el-checkbox(@change="complete(index)", v-model="item.isDone")
                                 span(@click="complete(index)") {{item.text}}
                                 el-button(type="primary", icon="circle-close", size="small", @click="removeItem(index)")
             el-row.home__actoin(type="flex", justify="center")
