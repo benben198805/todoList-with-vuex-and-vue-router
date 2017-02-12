@@ -1,11 +1,13 @@
 <template lang="pug">
     .index
         app-menu
-        router-view
+        transition(name='slide-fade')
+            router-view
 </template>
 
 <script>
 import AppMenu from './components/template/menu.vue'
+require("assets/app.scss");
 export default {
     created:function(){
       return this.$router.push('home')
