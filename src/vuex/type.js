@@ -1,4 +1,5 @@
 export const SET_HISTORY = 'SET_HISTORY'
+export const SET_SELECT_OPTION = 'SET_SELECT_OPTION'
 
 export const GET_ITEM = 'GET_ITEM'
 export const ADD_ITEM = 'ADD_ITEM'
